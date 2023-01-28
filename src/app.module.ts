@@ -6,7 +6,6 @@ import { ReportsModule } from './reports/reports.module';
 import { TypeOrmModule } from '@nestjs/typeorm/dist';
 import { Report } from './reports/reports.entity';
 import { Users } from './users/users.entity';
-
 @Module({
   imports: [
     TypeOrmModule.forRoot({
