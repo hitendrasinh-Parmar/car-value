@@ -38,13 +38,13 @@ describe('AuthService', () => {
 
     service = module.get(AuthService);
   })
+
   it('can create an instance of auht service', async () => {
     expect(service).toBeDefined();
   })
 
   it('create new user with salted and hashed password', async () => {
     const user = await service.signup('test@gmail.com', 'asdf');
-
     expect(user.password).not.toEqual('asdf');
     const [salt, hash] = user.password.split('.');
     expect(salt).toBeDefined();
@@ -59,8 +59,6 @@ describe('AuthService', () => {
           done();
         })
     })
-
-
   })
 
   it('throws an error if signin is called with unused email', (done) => {
@@ -71,7 +69,6 @@ describe('AuthService', () => {
   })
 
   it('throws if an invalid password is provided', (done) => {
-
     service.signup('pass3@gmail.com', 'asdf').then(() => {
       service.signin('pass3@gmail.com', 'asd')
         .catch((err) => {
