@@ -2,7 +2,7 @@ POST http://localhost:3000/auth/signup
 Content-Type: application/json
 
 {
-  "email": "pass6@gmail.com",
+  "email": "pass7@gmail.com",
   "password": "1" 
 }
 
@@ -11,7 +11,7 @@ POST http://localhost:3000/auth/signin
 Content-Type: application/json
 
 {
-  "email": "pass5@gmail.com",
+  "email": "pass7@gmail.com",
   "password": "1" 
 }
 
@@ -32,9 +32,9 @@ DELETE http://localhost:3000/auth/2
 
 
 ### update a user
-PATCH http://localhost:3000/auth/4
+PATCH http://localhost:3000/auth/10
 Content-Type: application/json
 
 {
-  "email": "update@gmail.com"
+  "password": "update@gmail.com"
 }
